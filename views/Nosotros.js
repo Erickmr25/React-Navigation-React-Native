@@ -2,7 +2,10 @@ import React from 'react';
 import { Text, StyleSheet, View, Button } from 'react-native';
 
 
-const Nosotros = ({navigation}) => {
+const Nosotros = ({navigation, route}) => {
+
+    // Aplicando un destroccioning
+    const { clienteId } = route.params;
 
     const volver = () => {
         //vuelve a la pantalla que le definamos
@@ -15,7 +18,7 @@ const Nosotros = ({navigation}) => {
 
     return (
         <View style={styles.contenedor}>
-            <Text>Nosotros</Text>
+            <Text> {clienteId} </Text>
             <Button 
                 title="Volver"
                 onPress={ () => volver() }

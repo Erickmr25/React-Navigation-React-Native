@@ -3,8 +3,14 @@ import { Text, StyleSheet, View, Button } from 'react-native';
 
 const Inicio = ({navigation}) => {
 
+    // Se crea un objeto con la información y se lo asinga en visitarNosotros
+    const informacion = {
+        clienteId: 5000,
+        totalpagar: 500
+    }
+
     const visitarNosotros = () => {
-        navigation.navigate('Nosotros')
+        navigation.navigate('Nosotros', informacion) //agrega los datos del objeto al navigate
     }
 
     return (
